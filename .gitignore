@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+.env
+.idea/
+data/*.csv
+models/*.pkl
+submission/*.csv
+
