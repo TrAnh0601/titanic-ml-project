@@ -54,7 +54,7 @@ def train(model_type, tune=False):
         grid_search = GridSearchCV(full_pipeline, param_grid, cv=5, scoring='accuracy', n_jobs=-1)
         grid_search.fit(X_train, y_train)
 
-        print(f">>> Best CV Score (Mean of 10 folds): {grid_search.best_score_:.4f}")
+        print(f">>> Best CV Score (Mean of 5 folds): {grid_search.best_score_:.4f}")
         print(f">>> Best Parameters: {grid_search.best_params_}")
         full_pipeline = grid_search.best_estimator_
     else:
@@ -97,8 +97,3 @@ if __name__ == "__main__":
     fitted_model = train(args.model, tune=args.tune)
     plot_feature_importance(fitted_model, args.model)
     generate_submission(fitted_model, test_df)
-
-
-
-
-
