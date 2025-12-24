@@ -25,7 +25,7 @@ class TitleExtractor(BaseEstimator, TransformerMixin):
         X['Title'] = X['Name'].str.extract(r' ([A-Za-z]+)\.', expand=False)
 
         # Map rare titles to a common category
-        X['Title'] = X['Title'].map(self.title_map).fillna("Rere")
+        X['Title'] = X['Title'].map(self.title_map).fillna("Rare")
 
         return X
 
