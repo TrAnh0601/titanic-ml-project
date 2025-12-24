@@ -51,7 +51,7 @@ def train(model_type, tune=False):
             'classifier__min_samples_leaf': [1, 2, 4]
         }
         # Using 5-fold cross-validation
-        grid_search = GridSearchCV(full_pipeline, param_grid, cv=10, scoring='accuracy', n_jobs=-1)
+        grid_search = GridSearchCV(full_pipeline, param_grid, cv=5, scoring='accuracy', n_jobs=-1)
         grid_search.fit(X_train, y_train)
 
         print(f">>> Best CV Score (Mean of 10 folds): {grid_search.best_score_:.4f}")
