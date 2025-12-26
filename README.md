@@ -12,7 +12,7 @@ A binary classification project built with a **production-ready modular architec
 
 ## Results & Benchmarks
 
-| Model | Val Accuracy | 10-Fold CV Score | Kaggle LB |
+| Model | Val Accuracy | 5-Fold CV Score | Kaggle LB |
 | :--- | :---: | :---: | :---: |
 | Logistic Regression | 0.8100 | - | - |
 | Random Forest (Default) | **0.8492** | - | 0.75598 |
